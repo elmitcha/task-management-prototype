@@ -1,0 +1,44 @@
+@import 'tailwindcss';
+
+@layer components {
+  :root {
+    --primary-indigo: #4f46e5;
+    --bg-slate: #f8fafc;
+  }
+
+  body {
+    @apply m-0 bg-slate-50 text-slate-900 font-sans;
+    min-height: 100vh;
+  }
+
+  .task-card {
+    @apply p-5 bg-white rounded-xl border transition-all shadow-sm flex items-center justify-between gap-4;
+  }
+
+  .task-card-active {
+    @apply border-slate-200 hover:border-blue-300;
+  }
+  .task-card-done {
+    @apply border-green-200 bg-green-50/30;
+  }
+
+  .task-title {
+    @apply font-semibold text-lg text-slate-800;
+  }
+  .task-title-done {
+    @apply text-slate-400 line-through;
+  }
+
+  .badge {
+    @apply text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider;
+  }
+  .badge-high {
+    @apply bg-red-100 text-red-600;
+  }
+  .badge-medium {
+    @apply bg-orange-100 text-orange-600;
+  }
+  .badge-low {
+    @apply bg-blue-100 text-blue-600;
+  }
+}

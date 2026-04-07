@@ -1,0 +1,52 @@
+### Variables
+@baseUrl = http://localhost:3000/api
+@contentType = application/json
+
+### 1. Créer une nouvelle tâche (Valide)
+# @name createTask
+POST {{baseUrl}}/tasks
+Content-Type: {{contentType}}
+
+{
+  "title": "Implémenter la pagination par Offset",
+  "description": "Utiliser skip/take pour une navigation par numéros de page",
+  "priority": "HIGH",
+  "status": "IN_PROGRESS",
+  "dueDate": "2026-04-30T12:00:00Z"
+}
+
+### 2. Créer une tâche (Invalide)
+POST {{baseUrl}}/tasks
+Content-Type: {{contentType}}
+
+{
+  "description": "Cette tâche n'a pas de titre"
+}
+
+### 3. Récupérer toutes les tâches (Page 1)
+# @name getTasks
+GET {{baseUrl}}/tasks?page=1&take=5
+Content-Type: {{contentType}}
+
+### 4. Récupérer la Page 2
+# Si tu as plus de 5 tâches, ceci récupérera les tâches 6 à 10
+GET {{baseUrl}}/tasks?page=2&take=5
+Content-Type: {{contentType}}
+
+### 5. Récupérer avec recherche et filtre
+GET {{baseUrl}}/tasks?search=Offset&status=IN_PROGRESS&page=1
+Content-Type: {{contentType}}
+
+### 6. Mettre à jour une tâche (PATCH)
+@taskId = {{createTask.response.body.id}}
+
+PATCH {{baseUrl}}/tasks/{{taskId}}
+Content-Type: {{contentType}}
+
+{
+  "status": "DONE",
+  "priority": "LOW"
+}
+
+### 7. Supprimer une tâche
+DELETE {{baseUrl}}/tasks/{{taskId}}
