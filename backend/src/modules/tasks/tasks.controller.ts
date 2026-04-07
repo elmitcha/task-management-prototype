@@ -17,20 +17,30 @@ const taskSchema = {
   },
 };
 
-/* const getTasksSchema = {
+const getTasksSchema = {
   schema: {
-    description: 'Liste des tâches avec pagination',
+    description: 'Liste des tâches avec pagination par page',
     tags: ['Tasks'],
     querystring: {
       type: 'object',
       properties: {
+        page: {
+          type: 'integer',
+          default: 1,
+          minimum: 1,
+          description: 'Le numéro de la page à récupérer',
+        },
         take: {
           type: 'integer',
           default: 10,
           minimum: 1,
+          maximum: 100,
+          description: "Nombre d'éléments par page",
         },
-        cursor: {
+        search: { type: 'string', nullable: true },
+        status: {
           type: 'string',
+          enum: ['TODO', 'IN_PROGRESS', 'DONE', 'CANCELED'],
           nullable: true,
         },
       },
@@ -40,26 +50,21 @@ const taskSchema = {
       200: {
         type: 'object',
         properties: {
-          data: { type: 'array', items: taskSchema },
+          data: {
+            type: 'array',
+            items: taskSchema,
+          },
           meta: {
             type: 'object',
             properties: {
-              nextCursor: { type: 'string', nullable: true },
-              count: { type: 'number' },
+              totalCount: { type: 'number', description: 'Nombre total de tâches en base' },
+              totalPages: { type: 'number', description: 'Nombre total de pages disponibles' },
+              currentPage: { type: 'number' },
+              itemsPerPage: { type: 'number' },
             },
           },
         },
       },
-    },
-  },
-}; */
-
-const getTasksSchema = {
-  schema: {
-    tags: ['Tasks'],
-    querystring: { type: 'object' },
-    response: {
-      /* ... */
     },
   },
 };
