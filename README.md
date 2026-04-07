@@ -261,4 +261,13 @@ L'utilisation de l'IA repose sur trois principes stricts :
 
 > 💬 _« L'IA n'a pas remplacé le développeur ; elle agit comme un multiplicateur de force pour livrer une solution end-to-end robuste dans un temps record. »_
 
+## 🚀 Perspectives & Améliorations (Roadmap)
+
+Bien que ce projet soit un prototype fonctionnel, plusieurs axes d'amélioration pourraient être explorés pour une mise en production réelle :
+
+1. **Sécurité :** Implémentation d'une authentification (JWT) et d'un Rate Limiting pour protéger les endpoints.
+2. **UX Avancée :** Ajout d'une "Optimistic UI" pour les suppressions et mises à jour afin d'éliminer la latence perçue.
+3. **Observabilité :** Intégration d'un outil comme Sentry pour le tracking d'erreurs et de corrélation d'ID dans les logs.
+4. **Persistance :** Ajout de "Soft Deletes" pour permettre la récupération de données supprimées accidentellement.
+
 _Projet réalisé avec rigueur dans le cadre du test technique CodesGenius AI - Avril 2026._
