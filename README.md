@@ -217,4 +217,48 @@ Le projet utilise **Pino**, un logger ultra-performant intégré nativement à F
 
 ---
 
+---
+
+## 🤖 Stratégie d'Utilisation de l'IA (Augmented Development)
+
+Ce projet a été réalisé en adoptant une approche de **développement augmenté par Intelligence Artificielle**.  
+L'objectif est de démontrer comment l'IA peut accélérer la livraison d'un prototype **sans compromettre la rigueur technique ni la qualité du code**.
+
+---
+
+### 🛠️ Outils & Usage
+
+- **Outil utilisé :** Gemini (Google), ChatGpt
+- **Rôle :** Co-pilote d'architecture et de debug
+
+#### Domaines d'intervention :
+
+- **Infrastructure DevOps :**  
+  Conception et optimisation des **Dockerfile multi-stages** et de l’orchestration `docker-compose` afin d’assurer une communication fluide entre les services.
+
+- **Sécurité des Types :**  
+  Génération de **types TypeScript complexes**, synchronisés entre le schéma Prisma (Backend) et les interfaces de consommation (Frontend).
+
+- **Résolution de Problèmes :**  
+  Diagnostic des conflits de ports, configuration des politiques **CORS** et gestion de la propagation des événements (**Event Bubbling**) dans le DOM.
+
+---
+
+### 💡 Philosophie d'Intégration
+
+L'utilisation de l'IA repose sur trois principes stricts :
+
+- **Accélération du Boilerplate :**  
+  Délégation des tâches répétitives (configurations, structures de tests) pour se concentrer sur la **logique métier**.
+
+- **Revue Humaine Systématique :**  
+  Chaque suggestion générée par l’IA est **analysée, testée et validée manuellement** afin de garantir le respect des standards de sécurité et des contraintes du projet.
+
+- **Maîtrise du Code :**  
+  L’IA agit comme un **outil de conseil**, mais toutes les décisions critiques (architecture, pagination par offset, gestion centralisée des erreurs) restent des choix d’ingénierie pleinement maîtrisés.
+
+---
+
+> 💬 _« L'IA n'a pas remplacé le développeur ; elle agit comme un multiplicateur de force pour livrer une solution end-to-end robuste dans un temps record. »_
+
 _Projet réalisé avec rigueur dans le cadre du test technique CodesGenius AI - Avril 2026._
