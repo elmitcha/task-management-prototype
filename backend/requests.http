@@ -33,8 +33,12 @@ Content-Type: {{contentType}}
 GET {{baseUrl}}/tasks?page=2&take=5
 Content-Type: {{contentType}}
 
-### 5. Récupérer avec recherche et filtre
-GET {{baseUrl}}/tasks?search=Offset&status=IN_PROGRESS&page=1
+### 5.A. Récupérer avec recherche
+GET {{baseUrl}}/tasks?search=Implémenter&page=1&take=5
+Content-Type: {{contentType}}
+
+### 5.B. Récupérer avec filtre
+GET {{baseUrl}}/tasks?status=IN_PROGRESS&page=1&take=5
 Content-Type: {{contentType}}
 
 ### 6. Mettre à jour une tâche (PATCH)
